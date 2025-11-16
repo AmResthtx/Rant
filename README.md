@@ -1,0 +1,2 @@
+# Rant
+Static website
