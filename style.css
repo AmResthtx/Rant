@@ -740,6 +740,8 @@ a.contact-value:hover { color: var(--rust); }
   grid-column: 1 / -1;
 }
 
+.gallery-item--wide img { min-height: 420px; }
+
 .gallery-item img {
   width: 100%;
   height: 100%;
@@ -817,7 +819,7 @@ a.contact-value:hover { color: var(--rust); }
 
   .gallery-grid         { grid-template-columns: 1fr; }
   .gallery-item--wide   { grid-column: 1; }
-  .gallery-item img,
+  .gallery-item img { min-height: 240px; }
   .gallery-item--wide img { min-height: 240px; }
   .gallery-caption      { opacity: 1; transform: translateY(0); }
 
