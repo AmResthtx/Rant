@@ -1,9 +1,25 @@
+# Dependencies
 node_modules/
+youtube-story-builder/node_modules/
+
+# Environment
 .env
 .env.local
-credentials/
-tokens/
+youtube-story-builder/.env
+youtube-story-builder/.env.local
+
+# Secrets
+youtube-story-builder/credentials/
+youtube-story-builder/tokens/
+
+# Logs
 *.log
+npm-debug.log*
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Build
 dist/
 build/
