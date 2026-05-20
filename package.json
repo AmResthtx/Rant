@@ -1,0 +1,21 @@
+{
+  "name": "youtube-story-builder",
+  "version": "1.0.0",
+  "description": "Automated YouTube story generator from emails and projects",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "setup": "node src/setup.js"
+  },
+  "dependencies": {
+    "anthropic": "^0.24.0",
+    "googleapis": "^143.0.0",
+    "google-auth-library": "^9.0.0",
+    "node-cron": "^3.0.2",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
