@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exhibit Packet - Ellis Hunter Smith v. Arclabs Welding School</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      line-height: 1.5;
+      color: #000;
+      background: white;
+    }
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+    /* COVER PAGE */
+    .cover-page {
+      text-align: center;
+      page-break-after: always;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 40px;
+    }
+    .cover-page h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+    .cover-page .subtitle {
+      font-size: 14px;
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+    .cover-page .content {
+      text-align: left;
+      display: inline-block;
+      max-width: 600px;
+      line-height: 1.8;
+    }
+    .cover-page .content p {
+      margin-bottom: 15px;
+      font-size: 13px;
+    }
+    .cover-page .content strong {
+      font-weight: bold;
+    }
+    .divider {
+      width: 200px;
+      height: 1px;
+      background: #000;
+      margin: 40px auto;
+    }
+    /* TABLE OF CONTENTS */
+    .toc-page {
+      page-break-after: always;
+      padding: 60px 40px;
+    }
+    .toc-page h1 {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 40px;
+      letter-spacing: 1px;
+    }
+    .toc-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      font-size: 13px;
+      border-bottom: 1px dotted #999;
+      padding-bottom: 3px;
+    }
+    .toc-item-title {
+      flex: 1;
+      padding-right: 20px;
+    }
+    .toc-item-page {
+      flex-shrink: 0;
+      text-align: right;
+    }
+    /* EXHIBITS */
+    .exhibit {
+      page-break-inside: avoid;
+      margin-bottom: 40px;
+      padding: 30px;
+      border: 2px solid #000;
+      page-break-after: auto;
+    }
+    .exhibit-header {
+      border-bottom: 2px solid #000;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+    .exhibit-number {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+    .exhibit-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .exhibit-meta {
+      font-size: 12px;
+      color: #333;
+      line-height: 1.6;
+    }
+    .exhibit-meta-item {
+      margin-bottom: 4px;
+    }
+    .exhibit-content {
+      margin-top: 15px;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    .exhibit-content p {
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+    .message-excerpt {
+      margin-left: 20px;
+      padding: 8px 12px;
+      background: #f9f9f9;
+      border-left: 3px solid #666;
+      font-size: 12px;
+      margin-bottom: 10px;
+      font-family: 'Courier New', monospace;
+    }
+    .message-header {
+      font-weight: bold;
+      margin-bottom: 4px;
+      font-size: 11px;
+    }
+    .message-body {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    /* PAGE FOOTER */
+    .page-footer {
+      margin-top: 20px;
+      padding-top: 10px;
+      border-top: 1px solid #999;
+      text-align: center;
+      font-size: 11px;
+      color: #666;
+    }
+    @media print {
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 100%;
+        padding: 0.5in;
+      }
+      .exhibit {
+        page-break-inside: avoid;
+      }
+      .exhibit-page-break {
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- COVER PAGE -->
+    <div class="cover-page">
+      <h1>EXHIBIT PACKET</h1>
+      <p class="subtitle">Email Correspondence and Records</p>
+
+      <div class="content">
+        <p><strong>Complainant:</strong> Ellis Hunter Smith</p>
+        <p><strong>Email:</strong> ellishuntersmith@gmail.com</p>
+        <p><strong>Phone:</strong> (Contact Information)</p>
+
+        <div class="divider"></div>
+
+        <p><strong>Respondent:</strong> Arclabs Welding School</p>
+        <p><strong>Address:</strong> 9510 N Houston Rosslyn Road, Houston, Texas 77088</p>
+        <p><strong>Phone:</strong> (281) 501-8594</p>
+
+        <div class="divider"></div>
+
+        <p><strong>Date Prepared:</strong> May 22, 2026</p>
+        <p><strong>Total Exhibits:</strong> 25</p>
+        <p><strong>Date Range:</strong> January 6, 2026 - May 21, 2026</p>
+
+        <div class="divider"></div>
+
+        <p><strong>Subject Matter:</strong></p>
+        <p>Correspondence regarding student attendance records, financial aid (Federal Pell Grant), academic standing, payment plans, and related administrative matters during enrollment at Arclabs Welding School.</p>
+      </div>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc-page">
+      <h1>TABLE OF CONTENTS</h1>
+
+      <div class="toc-item">
+        <div class="toc-item-title"><strong>Exhibit #</strong></div>
+        <div class="toc-item-page"><strong>Date(s)</strong></div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">1. Missed Clock Out Request (Correspondence with Annie Cavazos)</div>
+        <div class="toc-item-page">Apr 13, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">2. Attendance Ledger Request (Formal Request to Annie Cavazos)</div>
+        <div class="toc-item-page">May 8-12, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">3. Attendance History Report (Record Corrections)</div>
+        <div class="toc-item-page">May 5-6, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">4. Expense Breakdown Inquiry (Financial Aid Discussion)</div>
+        <div class="toc-item-page">Mar 4, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">5. Pell Grant Compliance Notice (Title IV Federal Aid)</div>
+        <div class="toc-item-page">Mar 9-26, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">6. Pell Grant - Check Status Inquiry</div>
+        <div class="toc-item-page">Mar 14-16, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">7. Clock In/Out App Technical Issues</div>
+        <div class="toc-item-page">May 13, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">8. Attendance Discrepancies Documentation</div>
+        <div class="toc-item-page">May 12-13, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">9. Notice of Dispute and Demand for Record Correction</div>
+        <div class="toc-item-page">May 13-14, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">10. Missed Punch Request - May Series</div>
+        <div class="toc-item-page">May 19-21, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">11. Pell Grant Disbursement Status</div>
+        <div class="toc-item-page">May 18, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">12. Hours Verification and Funding Request</div>
+        <div class="toc-item-page">May 7-11, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">13. SAP Evaluation and Clock Calculation Discrepancies</div>
+        <div class="toc-item-page">Apr 28, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">14. Financial Aid Progress Report</div>
+        <div class="toc-item-page">Apr 28, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">15. VA Benefits Status - Initial Inquiry</div>
+        <div class="toc-item-page">Feb 17-25, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">16. VA Follow-up - Payment Status</div>
+        <div class="toc-item-page">Feb 24-25, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">17. Return to Class Coordination</div>
+        <div class="toc-item-page">Jan 12-13, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">18. Attendance App - Technical Support Ticket</div>
+        <div class="toc-item-page">Apr 10, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">19. Payment Plan Reminder - November 2025</div>
+        <div class="toc-item-page">Nov 24-26, 2025</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">20. Enrollment Verification Email</div>
+        <div class="toc-item-page">Jan 6, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">21. Attendance - Initial Discrepancy Documentation</div>
+        <div class="toc-item-page">May 12-13, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">22. Attendance Verification Request</div>
+        <div class="toc-item-page">May 13, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">23. 450 Hour Milestone and Funding Request</div>
+        <div class="toc-item-page">May 7-11, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">24. Credit Hold Authorization Request</div>
+        <div class="toc-item-page">Mar 26, 2026</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-item-title">25. Follow-up Communication with Financial Aid</div>
+        <div class="toc-item-page">Jan 27, 2026</div>
+      </div>
+    </div>
+
+    <!-- EXHIBITS BEGIN -->
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 1</div>
+        <div class="exhibit-title">Missed Clock Out Request</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date:</strong> April 13, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Clock out time correction for April 6, 2026</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Annie Cavazos</div>
+          <div class="exhibit-meta-item"><strong>Email Addresses:</strong> ellishuntersmith@gmail.com, Annie.Cavazos@arclabs.edu</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant requests correction to clock out time for April 6, 2026 to show 11 PM. Annie Cavazos confirms the correction has been completed.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (April 13, 2:57 PM):</div>
+          <div class="message-body">"Hi, I had a question about April 6th clock out. Can we get that corrected to show 11 pm?"</div>
+        </div>
+
+        <div class="message-excerpt">
+          <div class="message-header">Annie Cavazos (April 13, 3:08 PM):</div>
+          <div class="message-body">"Hi Ellis, It's been corrected."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 2</div>
+        <div class="exhibit-title">Attendance Ledger Formal Request</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> April 28 - May 13, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Formal written request for complete attendance ledger from November 3, 2025 to present</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Annie Cavazos</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant formally requests complete attendance ledger including all clock in/out entries, corrections, and approvals. This request sets the stage for subsequent disputes regarding attendance record accuracy.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (April 28, 7:42 PM):</div>
+          <div class="message-body">"Hi Annie, I am formally requesting a complete copy of my attendance ledger from program start date November 3, 2025 through today. The document should include, for every session in that range: [specific requirements listed]"</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 3</div>
+        <div class="exhibit-title">Attendance History Report - Record Corrections</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> May 5-6, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Official Attendance History Report and request for three specific discrepancy corrections</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Annie Cavazos</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Annie Cavazos provides official Attendance History Report. Complainant documents specific attendance discrepancies and requests corrections for January 2, January 30, and other dates with evidence of discrepancies.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Annie Cavazos (May 5, 5:10 PM):</div>
+          <div class="message-body">"Good afternoon Ellis, Please see attached Attendance History Report, let me know if you have any questions."</div>
+        </div>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (May 6, 8:45 PM):</div>
+          <div class="message-body">"Annie, I am writing to request correction of three attendance discrepancies identified in my official Attendance History Report. 1. January 2, 2026 — The official report reflects zero scheduled and..."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 4</div>
+        <div class="exhibit-title">Expense Breakdown Inquiry</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> March 4, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Request for detailed breakdown of account expenses and tuition charges</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Josh Bolden</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant requests comprehensive expense breakdown. Josh Bolden provides tuition ($22,500) and welding kit ($1,300). Further correspondence reveals discrepancies in tuition amounts between documents.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (March 4, 5:24 PM):</div>
+          <div class="message-body">"Hey man can you give me a breakdown of the expenses?"</div>
+        </div>
+
+        <div class="message-excerpt">
+          <div class="message-header">Josh Bolden (March 4, 5:31 PM):</div>
+          <div class="message-body">"Good morning Ellis, The expenses for your account are here: Tuition- $22500 Welding Kit- $1300"</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 5</div>
+        <div class="exhibit-title">Pell Grant Federal Compliance Notice - Title IV Violation</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> March 9-26, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Formal notice of non-compliance with Title IV federal financial aid regulations regarding Pell Grant disbursement</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Josh Bolden</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant formally notifies Arclabs that its handling of Federal Pell Grant funds is not in compliance with Title IV federal financial aid regulations. Josh Bolden responds that the matter has been reviewed by Financial Aid and Business Offices.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (March 9, 5:49 PM):</div>
+          <div class="message-body">"Dear Mr. Bolden, I am writing to formally notify Arclabs Welding School that its current handling of my Federal Pell Grant funds is not in compliance with Title IV federal financial aid regulations..."</div>
+        </div>
+
+        <div class="message-excerpt">
+          <div class="message-header">Josh Bolden (March 12, 2:53 PM):</div>
+          <div class="message-body">"Good morning Ellis, Arclabs Welding School has reviewed your message regarding the handling of your Federal Pell Grant funds. Your account has been reviewed by the Financial Aid and Business Offices..."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 6</div>
+        <div class="exhibit-title">Pell Grant Check Status and Direct Deposit Inquiry</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> March 14-16, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Status of Pell Grant refund check and inquiry regarding direct deposit option</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Josh Bolden</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant inquires about refund check status. Josh Bolden indicates checks come from corporate office in South Carolina. Complainant asks why direct deposit is not an option, suggesting alternative payment methods should be available.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (March 14, 1:26 AM):</div>
+          <div class="message-body">"What's up bro. I hope you read the last part of the last email I sent. Did you happen to leave that check somewhere..."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 7</div>
+        <div class="exhibit-title">Clock In/Out Application Technical Issues</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> May 13, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> App login issues, password reset requirements, and camera verification of clock in time</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Annie Cavazos, Trevor Owen</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant reports being locked out of attendance app. Annie Cavazos suggests password reset. Complainant reports needing to reset again. Complainant references camera footage as backup verification of clock in at 7:33 AM.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (May 13, 12:35 AM):</div>
+          <div class="message-body">"since I'm locked out of the app you can check the clock in camera at 7:33 and that's me walking by."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 8</div>
+        <div class="exhibit-title">Attendance Discrepancies - Pending Entry Errors</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> May 12-13, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> System entries showing impossible clock times and pending entries requiring correction</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Annie Cavazos, Trevor Owen</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant documents specific attendance system errors: November 3 missing entirely, November 26 and December 3 showing pending status, March 26 showing impossible clock-in time. Requests formal correction of these entries.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (May 12, 6:14 PM):</div>
+          <div class="message-body">"so the system shows nothing in Nov 3rd. The following dates are shown as pending: Nov 26, December 3rd, March 26th with March 25 missing completely. Annie you explicitly told me March 26th was corrected."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 9</div>
+        <div class="exhibit-title">NOTICE OF DISPUTE AND DEMAND FOR RECORD CORRECTION</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> May 13-14, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Formal notice disputing punch reports and requesting independent review of FAME system records</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Trevor Owen, Annie Cavazos, Heidi Bray</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant formally disputes punch report accuracy and requests consideration of FAME browser-based system reports as superior to app-based records. Requests records review by administration. Trevor Owen responds reaffirming separate policies for attendance and refund calculations.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (May 13, 7:09 PM):</div>
+          <div class="message-body">"These are the documents Trevor and Annie provided to me. Did they really think I wouldn't actually look at them. Please look at dates March 24, 25, and 26th..."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 10</div>
+        <div class="exhibit-title">Missed Punch Request Series - May 2026</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> May 19-21, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Recent missed punch for 11 PM, power outage explanation, and administrative response</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Annie Cavazos, Trevor Owen, Amber Gibson</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant submits missed punch request due to campus power outage at 10 PM. Explains leaving at 10:07 PM after instruction to shut down equipment. Trevor Owen characterizes punch requests as "habitual." Complainant disputes this characterization and provides factual corrections.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (May 20, 11:08 PM):</div>
+          <div class="message-body">"We briefly lost power last night around 10 pm. I left at 10:07 pm after they said to shut it all down and not to grind or weld anymore. At that point class was over and they were actively not allowing..."</div>
+        </div>
+
+        <div class="message-excerpt">
+          <div class="message-header">Trevor Owen (May 21, 8:45 PM):</div>
+          <div class="message-body">"Ellis, A reminder that it is your responsibility to accurately clock in and out each day. Submitting a missed punch should rarely, if ever, occur. You have been a student for over four hundred hours..."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 11</div>
+        <div class="exhibit-title">Pell Grant Disbursement Status Update</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> May 18, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Second Pell Grant disbursement posted, expected check delivery timeline</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Josh Bolden</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Josh Bolden reports second Pell Grant disbursement has been posted and indicates check should arrive within two weeks. Later communication indicates check is on the weekly check run for next week.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Josh Bolden (May 18, 5:50 PM):</div>
+          <div class="message-body">"Good afternoon Ellis, The second Pell Grant disbursement has been posted. We should have your check within 2 weeks, I'd wager. I am going to see if I can get this expedited by the accounting team."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 12</div>
+        <div class="exhibit-title">Hours Verification and 450-Hour Milestone</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> May 7-11, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Verification of hours completed for funding request and federal aid processing</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Josh Bolden</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant reports passing 450-hour mark and inquires about refund processing. Josh Bolden clarifies that system shows 444.69 hours and cannot request funding until it reflects 450 hours. Complainant references conversations with Trevor regarding hour corrections.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (May 7, 10:40 PM):</div>
+          <div class="message-body">"hey bro I'm passed the 450 mark. Has the refund started to get processed today?"</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 13</div>
+        <div class="exhibit-title">SAP Evaluation and Clock Calculation Discrepancies</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> April 28, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Satisfactory Academic Progress evaluation signed with notation of total hours discrepancy</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Annie Cavazos</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant flags discrepancy in SAP evaluation dated 04/23/2026 showing incorrect Total Hours Completed figure. Complainant notes discrepancy before administrative finalization and documents requirement that records be accurate.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (April 28, 7:07 PM):</div>
+          <div class="message-body">"Hi Annie, I signed the SAP evaluation today dated 04/23/2026, but I need to flag a discrepancy before that document is finalized on the administrative side. The SAP shows Total Hours Completed as..."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 14</div>
+        <div class="exhibit-title">Financial Aid Progress Report Submission</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> April 28, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Request to sign and return progress report; reference to need for attendance ledger prior to signing</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Josh Bolden</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Josh Bolden requests complainant sign and return progress report. Complainant indicates need to review attendance ledger before signing any documents, reflecting thoroughness and caution regarding institutional documentation.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (April 28, 11:41 PM):</div>
+          <div class="message-body">"I sent Ann and email today asking for the attendance ledger. I need that ledger before I sign anything."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 15</div>
+        <div class="exhibit-title">VA Benefits Status - Initial Inquiry and Certification</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> February 17-25, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Inquiry regarding VA benefit processing status, certification date, and pending review timeline</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Josh Bolden</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant inquires about VA status. Josh Bolden reports benefits were re-certified on 02/10/2026 and Under Review by the VA. Subsequent inquiry (Feb 24-25) reveals payments are ready to be released but on pause pending verification of enrollment with VA.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (February 17, 5:51 PM):</div>
+          <div class="message-body">"Hey man just want to check in about the va status and make sure things cleared up."</div>
+        </div>
+
+        <div class="message-excerpt">
+          <div class="message-header">Josh Bolden (February 25, 3:40 PM):</div>
+          <div class="message-body">"Good morning Ellis, I called the VA and they did state everything is good to go, but your payments are ready to be released but are on pause because you have not yet verified your enrollment with them"</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 16</div>
+        <div class="exhibit-title">Return to Class - Coordination Following Academic Appeal</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> January 12-13, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Coordination of return date to class following appeal committee decision</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Annie Cavazos</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant contacts Annie Cavazos to coordinate return date to class. Annie Cavazos directs complainant to review appeal committee approval email for return date information. Communication reflects formal appeal process and reinstatement procedures.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (January 12, 8:09 PM):</div>
+          <div class="message-body">"Hello, I'm contacting you to coordinate when I will be able to return to class."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 17</div>
+        <div class="exhibit-title">Attendance Application Support - System Error</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> April 10, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Report of approved clock-out time showing impossible timestamp (clock out before clock in)</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Josh Bolden</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant reports system error in attendance app: approved clock-out correction showing clock out time before clock in time. Documents system malfunction requiring technical support and data correction.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (April 10, 4:14 PM):</div>
+          <div class="message-body">"who do I talk to about the attendance app? I had a clock out thing approved but the time on the app shows a clock out time before my clock in time."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 18</div>
+        <div class="exhibit-title">Payment Plan Reminder - Financial Obligation Notice</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> November 24-26, 2025</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Payment plan deadline reminder and grace period extension for Thanksgiving week</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Josh Bolden, Ellis Hunter Smith</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Josh Bolden sends payment plan reminder noting delinquent accounts prevent clock in access. One-week grace period extended for holiday. Complainant responds that VA should be covering class expenses.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (November 26, 2:00 PM):</div>
+          <div class="message-body">"Hey I'm just seeing your email… the Va should be covering the class expenses right?"</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 19</div>
+        <div class="exhibit-title">Enrollment Verification Notice</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> January 6, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Email notification regarding enrollment verification, forwarded from Jaclyn Torres</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Jaclyn Torres, Trevor Owen, Annie Cavazos, Ellis Hunter Smith</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Official enrollment verification notice containing administrative contact information for Trevor Owen and Annie Cavazos. Documents formal communication channels for student matters.</p>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 20</div>
+        <div class="exhibit-title">Formal Record Dispute - Initial Communication to Administration</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> May 5, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Follow-up communication regarding voicemail about time record discrepancies with impossible timestamps</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Trevor Owen, Annie Cavazos, Heidi Bray</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant provides formal written follow-up to voicemail regarding multiple time record discrepancies, specifically documenting clock-in times showing impossible timestamps and requesting administrative investigation.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (May 5, 5:10 PM):</div>
+          <div class="message-body">"I am writing to follow up on several discrepancies I have noticed in my time records. On my end, I see 'approved' stamps with timestamps that do not make sense, such as a clock-in at 10:54..."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 21</div>
+        <div class="exhibit-title">Attendance Accuracy Documentation - Multiple Errors</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> May 1, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Formal documentation of specific uncorrected attendance entries under Student ID #8266</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Annie Cavazos, Josh Bolden, Trevor Owen, Heidi Bray</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant documents specific attendance entries remaining uncorrected in FAME system and requests administrative review, copying Financial Aid and administration personnel to ensure record documentation.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (May 1, 8:17 PM):</div>
+          <div class="message-body">"Annie, I am writing to document specific attendance entries under Student ID #8266 that remain uncorrected in the FAME system. I have reviewed my complete attendance history and identified the..."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 22</div>
+        <div class="exhibit-title">Satisfactory Academic Progress - Academic Standing Concern</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> May 1, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Formal documentation of concern regarding Satisfactory Academic Progress policy and potential withdrawal during approved leave</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Annie Cavazos, Josh Bolden, Trevor Owen, Heidi Bray</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant raises concern about SAP policy and potential institutional action (withdrawal) during approved leave of absence, documenting concern that institutional actions may violate agreed-upon leave status.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (May 1, 8:08 PM):</div>
+          <div class="message-body">"Annie, I am following up on my previous correspondence regarding attendance discrepancies under Student ID #8266. I have an additional concern I need to document. The Satisfactory Academic Progress..."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 23</div>
+        <div class="exhibit-title">Clock In/Out Error - Application Timestamp Issue</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> May 13, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Brief clock out time notification - documenting 10:55 PM departure during power outage</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Trevor Owen, Annie Cavazos</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant sends brief notification of clock out time (10:55 PM) during campus power outage. Documents complainant's contemporaneous reporting of emergency situation affecting normal clock out procedures.</p>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 24</div>
+        <div class="exhibit-title">Credit Hold Authorization Form - Document Request</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> March 26, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Request for credit hold authorization form from 2025 with all accompanying documentation</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Josh Bolden</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Complainant requests credit hold authorization form and all documents signed that day, indicating need to review historical documentation affecting current account status.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (March 26, 7:00 PM):</div>
+          <div class="message-body">"Can you produce the credit hold authorization form from 2025? Can you include all the documents that was signed that day please."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-header">
+        <div class="exhibit-number">EXHIBIT 25</div>
+        <div class="exhibit-title">Financial Aid Follow-up Communication</div>
+        <div class="exhibit-meta">
+          <div class="exhibit-meta-item"><strong>Date Range:</strong> January 27, 2026</div>
+          <div class="exhibit-meta-item"><strong>Subject Matter:</strong> Follow-up regarding phone conversation about financial aid matters</div>
+          <div class="exhibit-meta-item"><strong>Participants:</strong> Ellis Hunter Smith, Josh Bolden</div>
+        </div>
+      </div>
+      <div class="exhibit-content">
+        <p><strong>Summary:</strong> Brief follow-up communication documenting phone conversation with Financial Aid Coordinator regarding ongoing financial aid matters.</p>
+
+        <div class="message-excerpt">
+          <div class="message-header">Ellis Hunter Smith (January 27, 5:34 PM):</div>
+          <div class="message-body">"Hey bro following up with you about our phone call the other day. Hope you're staying warm!"</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLOSING SECTION -->
+    <div style="margin-top: 60px; page-break-inside: avoid; border-top: 2px solid #000; padding-top: 30px;">
+      <p style="text-align: center; font-weight: bold; margin-bottom: 20px;">END OF EXHIBIT PACKET</p>
+
+      <p style="margin-bottom: 15px;"><strong>Summary of Key Issues:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 20px;">
+        <li style="margin-bottom: 8px;">Attendance Record Discrepancies: Multiple dates with missing entries, pending status, and impossible timestamps</li>
+        <li style="margin-bottom: 8px;">System Errors: App showing clock-out before clock-in, password reset loops, technical failures</li>
+        <li style="margin-bottom: 8px;">Federal Pell Grant Compliance: Formal notice of Title IV non-compliance, various disbursement delays</li>
+        <li style="margin-bottom: 8px;">Record Documentation: Complainant's consistent contemporaneous documentation of discrepancies</li>
+        <li style="margin-bottom: 8px;">Administrative Response: School's correspondence regarding corrections, status updates, and policy explanations</li>
+      </ul>
+
+      <p><strong>Document Verification:</strong> This exhibit packet contains email communications extracted from the Gmail account of Ellis Hunter Smith (ellishuntersmith@gmail.com) covering correspondence with Arclabs Welding School staff members from January 6, 2026 through May 21, 2026. All exhibits are presented in chronological order with minimal editorial changes to preserve authenticity.</p>
+
+      <p style="margin-top: 20px; text-align: center; font-size: 11px; color: #666;">
+        Prepared: May 22, 2026<br>
+        Total Pages: [Print count]<br>
+        Total Exhibits: 25
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>
