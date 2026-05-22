@@ -109,6 +109,143 @@ function getContactById(id) {
 }
 
 // ============================================
+// PDF EXPORT
+// ============================================
+
+function exportContactsAsPDF() {
+  const contacts = getContacts();
+
+  if (contacts.length === 0) {
+    alert('No contacts to export. Add contacts first!');
+    return;
+  }
+
+  let html = `
+    <div style="font-family: Arial, sans-serif; padding: 20px;">
+      <h1 style="color: #2C3E50; border-bottom: 2px solid #C0392B; padding-bottom: 10px;">
+        Texas Rigs & Roots - Contact List
+      </h1>
+      <p style="color: #666; margin-bottom: 20px;">
+        Generated: ${new Date().toLocaleString()}
+      </p>
+  `;
+
+  const groupedByOrg = {};
+  contacts.forEach(contact => {
+    if (!groupedByOrg[contact.organization]) {
+      groupedByOrg[contact.organization] = [];
+    }
+    groupedByOrg[contact.organization].push(contact);
+  });
+
+  Object.keys(ORGANIZATIONS).forEach(orgKey => {
+    if (groupedByOrg[orgKey]) {
+      html += `
+        <div style="margin-bottom: 25px; page-break-inside: avoid;">
+          <h2 style="color: #C0392B; border-left: 4px solid #C0392B; padding-left: 10px; margin-top: 20px;">
+            ${ORGANIZATIONS[orgKey]}
+          </h2>
+          <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+            <tr style="background: #f0f0f0;">
+              <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Name</th>
+              <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Email</th>
+              <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Added</th>
+            </tr>
+      `;
+
+      groupedByOrg[orgKey].forEach(contact => {
+        html += `
+            <tr>
+              <td style="border: 1px solid #ddd; padding: 8px;">${contact.name}</td>
+              <td style="border: 1px solid #ddd; padding: 8px;">${contact.email}</td>
+              <td style="border: 1px solid #ddd; padding: 8px;">${formatDate(contact.dateAdded)}</td>
+            </tr>
+        `;
+      });
+
+      html += `
+          </table>
+        </div>
+      `;
+    }
+  });
+
+  html += `</div>`;
+
+  const element = document.createElement('div');
+  element.innerHTML = html;
+
+  const opt = {
+    margin: 10,
+    filename: 'texas-rigs-contacts.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+  };
+
+  html2pdf().set(opt).from(element).save();
+}
+
+function exportEmailsAsPDF() {
+  const emails = getEmails();
+
+  if (emails.length === 0) {
+    alert('No emails to export. Log some emails first!');
+    return;
+  }
+
+  let html = `
+    <div style="font-family: Arial, sans-serif; padding: 20px;">
+      <h1 style="color: #2C3E50; border-bottom: 2px solid #C0392B; padding-bottom: 10px;">
+        Texas Rigs & Roots - Email History
+      </h1>
+      <p style="color: #666; margin-bottom: 20px;">
+        Generated: ${new Date().toLocaleString()}<br>
+        Total Emails: ${emails.length}
+      </p>
+  `;
+
+  emails.forEach((email, idx) => {
+    const contact = getContactById(email.contactId);
+    const openStatus = email.opened ? `✓ Opened on ${formatDate(email.openedAt)}` : 'Not opened';
+
+    html += `
+      <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; page-break-inside: avoid;">
+        <h3 style="color: #2C3E50; margin: 0 0 10px 0;">${email.subject}</h3>
+        <div style="color: #666; font-size: 12px; margin-bottom: 10px;">
+          <strong>To:</strong> ${contact ? contact.name + ' (' + ORGANIZATIONS[contact.organization] + ')' : 'Unknown'}<br>
+          <strong>Date:</strong> ${formatDate(email.dateSent)}<br>
+          <strong>Status:</strong> <span style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">${email.status}</span><br>
+          <strong>Open Status:</strong> ${openStatus}<br>
+          <strong>Opens:</strong> ${email.openCount}
+        </div>
+        <div style="background: #f9f9f9; padding: 10px; border-radius: 3px; margin: 10px 0; white-space: pre-wrap; word-wrap: break-word; font-size: 12px;">
+          ${email.body}
+        </div>
+        <div style="color: #999; font-size: 11px;">
+          Tracking Pixel: ${email.trackingPixelUrl}
+        </div>
+      </div>
+    `;
+  });
+
+  html += `</div>`;
+
+  const element = document.createElement('div');
+  element.innerHTML = html;
+
+  const opt = {
+    margin: 10,
+    filename: 'texas-rigs-email-history.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+  };
+
+  html2pdf().set(opt).from(element).save();
+}
+
+// ============================================
 // DOM MANIPULATION
 // ============================================
 

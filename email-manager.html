@@ -29,6 +29,10 @@
       <div class="email-manager-header">
         <h1>Email Manager</h1>
         <p>Organize contacts by organization and track email history with open rates</p>
+        <div class="export-buttons">
+          <button class="btn btn-small" onclick="exportContactsAsPDF()">Export Contacts as PDF</button>
+          <button class="btn btn-small" onclick="exportEmailsAsPDF()">Export Email History as PDF</button>
+        </div>
       </div>
 
       <!-- TABS -->
@@ -158,6 +162,7 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script src="email-manager.js"></script>
 </body>
 </html>

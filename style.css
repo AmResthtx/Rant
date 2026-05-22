@@ -809,6 +809,14 @@ a.contact-value:hover { color: var(--rust); }
   font-size: 1.05rem;
 }
 
+.export-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* TABS */
 .email-manager-tabs {
   display: flex;
