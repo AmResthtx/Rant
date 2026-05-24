@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>This app needs access to your microphone to listen to your voice commands and send them to Claude AI for processing.</string>
+	<string>This app needs access to your microphone to listen to your voice commands and send them to your local AI server for processing.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>This app uses speech recognition to convert your voice to text for processing by Claude AI.</string>
+	<string>This app uses speech recognition to convert your voice to text for processing by your local AI server.</string>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>This app communicates with Anthropic's API servers to process your requests.</string>
+	<string>This app communicates with your local Ollama server on your Mac to process requests.</string>
 	<key>NSBonjourServices</key>
 	<array>
 		<string>_http._tcp</string>

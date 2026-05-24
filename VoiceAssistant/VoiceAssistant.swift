@@ -16,10 +16,10 @@ class VoiceAssistant: NSObject, ObservableObject, SFSpeechRecognizerDelegate {
     private let audioEngine = AVAudioEngine()
     private let synthesizer = AVSpeechSynthesizer()
 
-    private let apiKey: String
+    private let ollamaURL: String
 
     override init() {
-        self.apiKey = ProcessInfo.processInfo.environment["ANTHROPIC_API_KEY"] ?? ""
+        self.ollamaURL = ProcessInfo.processInfo.environment["OLLAMA_URL"] ?? "http://192.168.1.100:11434"
         super.init()
 
         speechRecognizer?.delegate = self
@@ -87,17 +87,21 @@ class VoiceAssistant: NSObject, ObservableObject, SFSpeechRecognizerDelegate {
         isProcessing = true
         error = nil
 
-        let url = URL(string: "https://api.anthropic.com/v1/messages")!
+        guard let url = URL(string: "\(ollamaURL)/api/generate") else {
+            error = "Invalid Ollama URL"
+            isProcessing = false
+            return
+        }
+
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "x-api-key")
-        request.setValue("2023-06-01", forHTTPHeaderField: "anthropic-version")
+        request.timeoutInterval = 60
 
         let body: [String: Any] = [
-            "model": "claude-3-5-sonnet-20241022",
-            "max_tokens": 1024,
-            "messages": [["role": "user", "content": prompt]]
+            "model": "mistral",
+            "prompt": prompt,
+            "stream": false
         ]
 
         do {
@@ -105,12 +109,10 @@ class VoiceAssistant: NSObject, ObservableObject, SFSpeechRecognizerDelegate {
             let (data, _) = try await URLSession.shared.data(for: request)
 
             let decoder = JSONDecoder()
-            let apiResponse = try decoder.decode(ClaudeAPIResponse.self, from: data)
+            let ollamaResponse = try decoder.decode(OllamaResponse.self, from: data)
 
-            if let content = apiResponse.content.first {
-                self.response = content.text
-                await speak(content.text)
-            }
+            self.response = ollamaResponse.response.trimmingCharacters(in: .whitespacesAndNewlines)
+            await speak(self.response)
         } catch {
             self.error = "Failed to get response: \(error.localizedDescription)"
         }
@@ -141,11 +143,6 @@ class VoiceAssistant: NSObject, ObservableObject, SFSpeechRecognizerDelegate {
     }
 }
 
-struct ClaudeAPIResponse: Decodable {
-    struct ContentBlock: Decodable {
-        let type: String
-        let text: String
-    }
-
-    let content: [ContentBlock]
+struct OllamaResponse: Decodable {
+    let response: String
 }
