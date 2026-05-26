@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grant Application Agent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Grant Application Agent</h1>
+      <p>Paste grant details. Agent builds your application.</p>
+    </header>
+
+    <main class="content">
+      <!-- Grant Boundaries Info -->
+      <section class="info-panel">
+        <h2>Your Grant Boundaries</h2>
+        <div id="boundariesDisplay"></div>
+      </section>
+
+      <!-- Input Section -->
+      <section class="form-section">
+        <h2>Step 1: Provide Grant Details</h2>
+        <div class="form-group">
+          <label for="grantText">Paste Grant Requirements/Details:</label>
+          <textarea
+            id="grantText"
+            placeholder="Paste the complete grant description, requirements, eligibility criteria, deadlines, etc. here..."
+            rows="12"
+          ></textarea>
+          <small>Include all relevant grant information: funding amount, requirements, evaluation criteria, deadlines, eligibility.</small>
+        </div>
+
+        <h2>Step 2: Applicant Information (Optional)</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="applicantName">Name/Organization:</label>
+            <input type="text" id="applicantName" placeholder="Your name or organization name">
+          </div>
+          <div class="form-group">
+            <label for="applicantOrg">Organization Type:</label>
+            <input type="text" id="applicantOrg" placeholder="e.g., Nonprofit, Small Business">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="missionStatement">Mission Statement (Optional):</label>
+          <textarea
+            id="missionStatement"
+            placeholder="Describe your mission and goals..."
+            rows="4"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="focusAreas">Focus Areas (comma-separated, optional):</label>
+          <input
+            type="text"
+            id="focusAreas"
+            placeholder="e.g., Education, Technology, Healthcare"
+          >
+        </div>
+      </section>
+
+      <!-- Action Buttons -->
+      <section class="actions">
+        <button id="generateBtn" class="btn btn-primary">Generate Application</button>
+        <button id="clearBtn" class="btn btn-secondary">Clear All</button>
+      </section>
+
+      <!-- Status Messages -->
+      <div id="messages"></div>
+
+      <!-- Output Section -->
+      <section id="outputSection" class="output-section" style="display: none;">
+        <h2>Generated Application</h2>
+        <div id="applicationOutput" class="application-output"></div>
+        <div class="output-actions">
+          <button id="copyBtn" class="btn btn-secondary">Copy to Clipboard</button>
+          <button id="downloadBtn" class="btn btn-secondary">Download as Text</button>
+          <button id="newApplicationBtn" class="btn btn-secondary">Generate New Application</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Generated applications are ready for your review and submission.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
