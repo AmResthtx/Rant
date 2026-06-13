@@ -11,7 +11,7 @@
 
   <header class="site-header">
     <div class="business-name">Texas Rigs &amp; Roots</div>
-    <div class="tagline">Helical Pier Installation · Houston, TX</div>
+    <div class="tagline">Helical Pier Manufacturing &amp; Installation · Houston, TX</div>
   </header>
 
   <div class="alert-banner">
@@ -26,8 +26,8 @@
   <div class="content">
 
     <h2>This isn't just a road problem.</h2>
-    <p>Sinkholes don't happen in isolation. They're a sign that the soil underneath is moving — and in Houston's clay-heavy ground, when one area starts to shift, nearby foundations can be next. The sinkhole at Bammel North Houston and Veteran Memorial is a visible symptom of what's happening underground.</p>
-    <p>You may not see anything wrong with your foundation today. But Houston clay soil expands in wet weather and contracts in drought — and that cycle puts constant pressure on whatever is holding your property up. If it's concrete, that pressure adds up over time.</p>
+    <p>Sinkholes don't happen in isolation. They're a sign that the soil underneath is moving — and in Houston's clay-heavy ground, when one area starts to shift, nearby foundations can be next.</p>
+    <p>You may not see anything wrong with your foundation today. But Houston clay soil expands in wet weather and contracts in drought — and that cycle puts constant pressure on whatever is holding your home up.</p>
 
     <h2>What you get from a free consultation:</h2>
     <ul class="benefit-list">
@@ -38,16 +38,16 @@
 
     <div class="proof-block">
       <div class="proof-label">Recent Work</div>
-      We recently completed a helical pier installation on a residential property in Huffman, Texas — right next to Lake Houston. That's some of the most challenging soil in the region. The installation held. The homeowner didn't have to come back.
+      We recently completed a helical pier installation on a residential property in Huffman, Texas — right next to Lake Houston. That's some of the most challenging soil in the region. The installation was completed on schedule, and the foundation is stable.
     </div>
 
     <h2>Why helical piers — and why not concrete?</h2>
-    <p>Helical piers are screwed down through the unstable clay layer into the load-bearing soil below it. They don't rely on surface conditions. That means when Houston dries out and the clay shrinks — which it will — the pier doesn't move with it.</p>
+    <p>Helical piers are screwed down through the unstable clay layer into the load-bearing soil below it. They don't rely on surface conditions. That means when Houston dries out and the clay shrinks, your piers stay locked in place.</p>
     <p>Concrete piers are less expensive up front. But they sit in the same clay that's causing the problem. Given enough drought cycles, they shift too. Then you're doing the repair twice.</p>
 
     <div class="price-section">
       <div class="price-label">On Cost</div>
-      Helical piers cost more than concrete piers upfront — that's true, and I won't pretend otherwise. But a foundation that moves after the repair costs far more: in additional work, in property value, and in time. I'd rather you hear that from me before we start than explain it after.
+      Helical piers cost more than concrete piers upfront — that's true, and I won't pretend otherwise. But a foundation that moves after the repair costs far more: in additional work, in proper ties, and in the stress on your family. This is one of those places where the cheapest option isn't the smartest option.
     </div>
 
   </div>
@@ -56,21 +56,26 @@
     <h2>Get Your Free Foundation Assessment</h2>
     <p class="form-subhead">I'll call you within 24 hours. No obligation, no pressure.</p>
 
-    <form class="lead-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form class="lead-form" id="foundationForm" novalidate>
       <label for="name">Your Name</label>
       <input type="text" id="name" name="name" placeholder="First and last name" required />
 
-      <label for="contact">Phone or Email</label>
-      <input type="text" id="contact" name="contact" placeholder="Best way to reach you" required />
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required />
+
+      <label for="email">Email Address (optional)</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com" />
 
       <label for="situation">Tell me about your property (optional)</label>
       <textarea id="situation" name="situation" placeholder="Address, what you're seeing, any questions — whatever you want me to know ahead of time"></textarea>
 
-      <input type="hidden" name="_next" value="thank-you.html" />
-      <input type="hidden" name="_subject" value="New Foundation Assessment Request — Bammel Area" />
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
+      <input type="hidden" name="subject" value="New Foundation Assessment Request — Bammel Area" />
+      <input type="hidden" name="redirect" value="thank-you.html" />
 
       <button type="submit" class="cta-button">Get My Free Assessment →</button>
       <p class="form-note">Your information goes directly to me. I don't share it with anyone.</p>
+      <p id="form-message" style="margin-top: 1rem; display: none;"></p>
     </form>
   </section>
 
@@ -78,5 +83,76 @@
     Texas Rigs &amp; Roots · Houston, TX · <a href="tel:+19798031644">(979) 803-1644</a> · <a href="mailto:Rigsnroots@gmail.com">Rigsnroots@gmail.com</a>
   </footer>
 
+  <script>
+    // Funnel form handler — Web3Forms integration
+    const funnelForm = document.getElementById('foundationForm');
+    if (funnelForm) {
+      funnelForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const name = funnelForm.querySelector('#name').value.trim();
+        const phone = funnelForm.querySelector('#phone').value.trim();
+        const email = funnelForm.querySelector('#email').value.trim();
+
+        // Basic validation
+        if (!name || !phone) {
+          showFunnelMessage('Please provide your name and phone number.', 'error');
+          return;
+        }
+
+        if (email && !isValidEmail(email)) {
+          showFunnelMessage('Please enter a valid email address.', 'error');
+          return;
+        }
+
+        const btn = funnelForm.querySelector('button[type="submit"]');
+        const originalText = btn.textContent;
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+
+        try {
+          const formData = new FormData(funnelForm);
+          const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+          });
+
+          const result = await response.json();
+
+          if (response.ok && result.success) {
+            // Redirect to thank you page
+            window.location.href = 'thank-you.html';
+          } else {
+            showFunnelMessage('There was an issue. Please call us directly: (979) 803-1644', 'error');
+          }
+        } catch (error) {
+          console.error('Form error:', error);
+          showFunnelMessage('Network error. Please try again or call: (979) 803-1644', 'error');
+        } finally {
+          btn.disabled = false;
+          btn.textContent = originalText;
+        }
+      });
+    }
+
+    function isValidEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+
+    function showFunnelMessage(text, type) {
+      const msgEl = document.getElementById('form-message');
+      msgEl.textContent = text;
+      msgEl.style.color = type === 'success' ? '#155724' : '#721c24';
+      msgEl.style.backgroundColor = type === 'success' ? '#d4edda' : '#f8d7da';
+      msgEl.style.border = `1px solid ${type === 'success' ? '#c3e6cb' : '#f5c6cb'}`;
+      msgEl.style.padding = '0.75rem 1rem';
+      msgEl.style.borderRadius = '6px';
+      msgEl.style.display = 'block';
+      setTimeout(() => {
+        msgEl.style.display = 'none';
+      }, 6000);
+    }
+  </script>
 </body>
 </html>

@@ -45,33 +45,64 @@ const observer = new IntersectionObserver(entries => {
 
 sections.forEach(s => observer.observe(s));
 
-// Contact form — basic client-side validation + UX
+// Contact form — Web3Forms integration with client-side validation
 const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const name    = form.querySelector('#name').value.trim();
     const phone   = form.querySelector('#phone').value.trim();
+    const email   = form.querySelector('#email').value.trim();
     const service = form.querySelector('#service').value;
+    const message = form.querySelector('#message').value.trim();
 
+    // Client-side validation
     if (!name || !phone || !service) {
-      showMessage(form, 'Please fill in all required fields.', 'error');
+      showMessage(form, 'Please fill in all required fields (Name, Phone, Service).', 'error');
       return;
     }
 
-    // Replace this block with your actual form submission (Formspree, EmailJS, etc.)
+    // Validate email if provided
+    if (email && !isValidEmail(email)) {
+      showMessage(form, 'Please enter a valid email address.', 'error');
+      return;
+    }
+
     const btn = form.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
     btn.textContent = 'Sending...';
     btn.disabled = true;
 
-    setTimeout(() => {
-      showMessage(form, "Thank you! We'll be in touch shortly.", 'success');
-      form.reset();
-      btn.textContent = 'Send My Request';
+    try {
+      // Prepare form data for Web3Forms
+      const formData = new FormData(form);
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        showMessage(form, 'Success! Thank you for your request. We\'ll be in touch within one business day.', 'success');
+        form.reset();
+      } else {
+        showMessage(form, result.message || 'There was an issue submitting your request. Please try again or call us directly.', 'error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      showMessage(form, 'Network error. Please check your connection and try again, or call us directly: (979) 803-1644', 'error');
+    } finally {
+      btn.textContent = originalText;
       btn.disabled = false;
-    }, 1000);
+    }
   });
+}
+
+function isValidEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
 }
 
 function showMessage(form, text, type) {
