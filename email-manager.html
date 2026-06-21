@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email Manager | Texas Rigs & Roots</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <span class="logo-main">TEXAS RIGS</span><span class="logo-amp">&</span><span class="logo-roots">ROOTS</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#contact" class="btn btn-outline-nav">Back to Site</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- EMAIL MANAGER -->
+  <section class="email-manager-section">
+    <div class="container">
+      <div class="email-manager-header">
+        <h1>Email Manager</h1>
+        <p>Organize contacts by organization and track email history with open rates</p>
+        <div class="export-buttons">
+          <button class="btn btn-small" onclick="exportContactsAsPDF()">Export Contacts as PDF</button>
+          <button class="btn btn-small" onclick="exportEmailsAsPDF()">Export Email History as PDF</button>
+        </div>
+      </div>
+
+      <!-- TABS -->
+      <div class="email-manager-tabs">
+        <button class="tab-btn active" data-tab="contacts">Contacts</button>
+        <button class="tab-btn" data-tab="emails">Email History</button>
+      </div>
+
+      <!-- CONTACTS TAB -->
+      <div class="tab-content active" id="contacts-tab">
+        <div class="contacts-container">
+          <!-- Add Contact Form -->
+          <div class="add-contact-form">
+            <h2>Add New Contact</h2>
+            <form id="addContactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactName">Name *</label>
+                  <input type="text" id="contactName" name="name" placeholder="John Smith" required />
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail">Email *</label>
+                  <input type="email" id="contactEmail" name="email" placeholder="john@example.com" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contactOrg">Organization *</label>
+                <select id="contactOrg" name="organization" required>
+                  <option value="">Select organization...</option>
+                  <option value="arclabs">Arclabs</option>
+                  <option value="stablechase">Stablechase</option>
+                  <option value="jp4-cops">JP4 and COPS</option>
+                  <option value="harris-county">Harris County Officials</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Add Contact</button>
+            </form>
+          </div>
+
+          <!-- Contacts List by Organization -->
+          <div class="contacts-list">
+            <h2>Your Contacts</h2>
+            <div id="contactsContainer"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EMAIL HISTORY TAB -->
+      <div class="tab-content" id="emails-tab">
+        <div class="emails-container">
+          <!-- Log Email Form -->
+          <div class="log-email-form">
+            <h2>Log New Email</h2>
+            <form id="logEmailForm">
+              <div class="form-group">
+                <label for="emailContact">Select Contact *</label>
+                <select id="emailContact" name="contact" required>
+                  <option value="">Choose a contact...</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="emailSubject">Subject *</label>
+                <input type="text" id="emailSubject" name="subject" placeholder="Email subject..." required />
+              </div>
+              <div class="form-group">
+                <label for="emailBody">Body *</label>
+                <textarea id="emailBody" name="body" rows="5" placeholder="Email body..." required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="emailStatus">Status *</label>
+                <select id="emailStatus" name="status" required>
+                  <option value="sent">Sent</option>
+                  <option value="draft">Draft</option>
+                  <option value="follow-up">Follow-up Needed</option>
+                  <option value="completed">Completed</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Log Email</button>
+            </form>
+          </div>
+
+          <!-- Email History -->
+          <div class="email-history">
+            <h2>Email History</h2>
+            <div id="emailHistoryContainer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-main">TEXAS RIGS</span><span class="logo-amp">&</span><span class="logo-roots">ROOTS</span>
+          <p>Helical pier installation, excavation, welding &amp; fabrication — built on Texas grit.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="index.html#services">Helical Pier Installation</a></li>
+            <li><a href="index.html#services">Excavation Services</a></li>
+            <li><a href="index.html#services">Welding &amp; Fabrication</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#why-us">Why Us</a></li>
+            <li><a href="index.html#process">Our Process</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p><a href="mailto:info@texasrigsroots.com">info@texasrigsroots.com</a></p>
+          <p>Serving Texas &amp; Surrounding Areas</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Texas Rigs &amp; Roots. All rights reserved.</p>
+        <p>texasrigsroots.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="email-manager.js"></script>
+</body>
+</html>

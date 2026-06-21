@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arclabs Email Archive - Ellis Hunter Smith</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: white;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      border-bottom: 3px solid #C0392B;
+      padding-bottom: 20px;
+    }
+    .header h1 {
+      color: #2C3E50;
+      margin-bottom: 10px;
+      font-size: 2.5em;
+    }
+    .header p {
+      color: #666;
+      font-size: 1.1em;
+      margin-bottom: 5px;
+    }
+    .meta {
+      color: #999;
+      font-size: 0.95em;
+      margin-top: 10px;
+    }
+    .email-thread {
+      margin-bottom: 40px;
+      page-break-inside: avoid;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .thread-header {
+      background: #f8f9fa;
+      padding: 15px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    .thread-title {
+      font-size: 1.3em;
+      font-weight: 600;
+      color: #2C3E50;
+      margin-bottom: 8px;
+    }
+    .thread-meta {
+      font-size: 0.9em;
+      color: #666;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .thread-content {
+      padding: 20px;
+    }
+    .message {
+      margin-bottom: 15px;
+      padding: 12px;
+      background: #fff;
+      border-left: 3px solid #C0392B;
+    }
+    .message-header {
+      margin-bottom: 10px;
+      font-weight: 500;
+      color: #2C3E50;
+    }
+    .message-from {
+      color: #C0392B;
+      font-weight: 600;
+    }
+    .message-date {
+      color: #999;
+      font-size: 0.85em;
+      margin-left: 10px;
+    }
+    .message-body {
+      color: #555;
+      line-height: 1.7;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    .participants {
+      font-size: 0.85em;
+      color: #666;
+      margin-top: 8px;
+    }
+    .summary-section {
+      background: #f0f0f0;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+    .summary-section h2 {
+      color: #2C3E50;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #C0392B;
+      padding-bottom: 10px;
+    }
+    .summary-list {
+      list-style: none;
+    }
+    .summary-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .summary-list li:last-child {
+      border-bottom: none;
+    }
+    .summary-list strong {
+      color: #C0392B;
+    }
+    @media print {
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 100%;
+        padding: 20px;
+      }
+      .email-thread {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Email Archive</h1>
+      <p><strong>From:</strong> Ellis Hunter Smith (ellishuntersmith@gmail.com)</p>
+      <p><strong>To:</strong> Arclabs Welding School Staff</p>
+      <p><strong>Organization:</strong> Arclabs Welding School</p>
+      <p><strong>Address:</strong> 9510 N Houston Rosslyn Road, Houston, TX 77088</p>
+      <div class="meta">
+        <p>Generated: <strong>May 22, 2026</strong></p>
+        <p>Total Threads: <strong>25</strong></p>
+        <p>Date Range: January 2026 - May 2026</p>
+      </div>
+    </div>
+
+    <div class="summary-section">
+      <h2>Key Correspondents</h2>
+      <ul class="summary-list">
+        <li><strong>Josh Bolden</strong> - Financial Aid Coordinator (josh.bolden@arclabs.edu)</li>
+        <li><strong>Annie Cavazos</strong> - Student Services Coordinator (Annie.Cavazos@arclabs.edu)</li>
+        <li><strong>Trevor Owen</strong> - Administrator (Trevor.Owen@arclabs.edu)</li>
+        <li><strong>Heidi Bray</strong> - (Heidi.Bray@arclabs.com)</li>
+        <li><strong>Amber Gibson</strong> - (Amber.Gibson@arclabs.edu)</li>
+      </ul>
+    </div>
+
+    <div class="summary-section">
+      <h2>Email Topics by Thread</h2>
+      <ul class="summary-list">
+        <li><strong>Attendance/Punch Requests:</strong> 8 threads - Clock in/out discrepancies, missed punch corrections</li>
+        <li><strong>Pell Grant/Financial Aid:</strong> 9 threads - Federal aid funding, disbursements, refund status</li>
+        <li><strong>Attendance Records:</strong> 5 threads - Formal disputes, attendance history corrections, SAP</li>
+        <li><strong>VA Benefits:</strong> 3 threads - VA enrollment, benefit certification and payment status</li>
+      </ul>
+    </div>
+
+    <!-- EMAIL THREADS -->
+
+    <div class="email-thread">
+      <div class="thread-header">
+        <div class="thread-title">Missed punch request - Recent Correspondence</div>
+        <div class="thread-meta">
+          <span>Thread ID: 19e47840ba41af84</span>
+          <span>Dates: May 19-21, 2026</span>
+          <span>Messages: 5</span>
+        </div>
+      </div>
+      <div class="thread-content">
+        <div class="participants">
+          <strong>Participants:</strong> Annie Cavazos, Trevor Owen, Amber Gibson, Ellis Hunter Smith
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Annie Cavazos</span>
+            <span class="message-date">May 20, 2026 at 10:31 PM</span>
+          </div>
+          <div class="message-body">Good evening Ellis, You submitted another missed punch for 11 PM last night. Did you mean to clock out at 11 PM and leave earlier? The reason I am asking is because you're the only student who...</div>
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Ellis Hunter Smith</span>
+            <span class="message-date">May 20, 2026 at 11:08 PM</span>
+          </div>
+          <div class="message-body">We briefly lost power last night around 10 pm. I left at 10:07 pm after they said to shut it all down and not to grind or weld anymore. At that point class was over and they were actively not allowing...</div>
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Trevor Owen</span>
+            <span class="message-date">May 21, 2026 at 8:45 PM</span>
+          </div>
+          <div class="message-body">Ellis, A reminder that it is your responsibility to accurately clock in and out each day. Submitting a missed punch should rarely, if ever, occur. You have been a student for over four hundred hours...</div>
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Ellis Hunter Smith</span>
+            <span class="message-date">May 21, 2026 at 10:23 PM</span>
+          </div>
+          <div class="message-body">Trevor, A few corrections to the record. You characterize my punch requests as "habitual" and state that I have "failed to properly clock out three of the last four school days." That framing requires...</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="email-thread">
+      <div class="thread-header">
+        <div class="thread-title">NOTICE OF DISPUTE AND DEMAND FOR RECORD CORRECTION</div>
+        <div class="thread-meta">
+          <span>Thread ID: 19e21d65f0ffd213</span>
+          <span>Dates: May 13-14, 2026</span>
+          <span>Messages: 6</span>
+        </div>
+      </div>
+      <div class="thread-content">
+        <div class="participants">
+          <strong>Participants:</strong> Trevor Owen, Annie Cavazos, Heidi Bray, Ellis Hunter Smith
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Ellis Hunter Smith</span>
+            <span class="message-date">May 13, 2026 at 7:09 PM</span>
+          </div>
+          <div class="message-body">These are the documents Trevor and Annie provided to me. Did they really think I wouldn't actually look at them. Please look at dates March 24, 25, and 26th, I asked Annie about getting those days...</div>
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Trevor Owen</span>
+            <span class="message-date">May 13, 2026 at 7:48 PM</span>
+          </div>
+          <div class="message-body">Ellis, We discussed that the punch report and your app do not reflect punch correction requests. Please reference the attendance summary report that Annie printed and emailed to you. Regarding your "...</div>
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Ellis Hunter Smith</span>
+            <span class="message-date">May 13, 2026 at 8:15 PM</span>
+          </div>
+          <div class="message-body">Trevor, The additional records I reviewed were not limited to the mobile app interface. They were generated from the FAME browser-based reporting system itself. Those records reflect that some dates...</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="email-thread">
+      <div class="thread-header">
+        <div class="thread-title">Pell Grant - Financial Aid Disbursement</div>
+        <div class="thread-meta">
+          <span>Thread ID: 19e3bec7d8697fd3</span>
+          <span>Dates: May 18, 2026</span>
+          <span>Messages: 3</span>
+        </div>
+      </div>
+      <div class="thread-content">
+        <div class="participants">
+          <strong>Participants:</strong> Josh Bolden, Ellis Hunter Smith
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Ellis Hunter Smith</span>
+            <span class="message-date">May 18, 2026 at 5:11 PM</span>
+          </div>
+          <div class="message-body">What's up dude what's the update</div>
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Josh Bolden</span>
+            <span class="message-date">May 18, 2026 at 5:50 PM</span>
+          </div>
+          <div class="message-body">Good afternoon Ellis, The second Pell Grant disbursement has been posted. We should have your check within 2 weeks, I'd wager. I am going to see if I can get this expedited by the accounting team.</div>
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Josh Bolden</span>
+            <span class="message-date">May 18, 2026 at 6:06 PM</span>
+          </div>
+          <div class="message-body">Hey Ellis, I received confirmation that it should be on this week's check run, so we should have it next week.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="email-thread">
+      <div class="thread-header">
+        <div class="thread-title">Pell Grant - Federal Aid Compliance</div>
+        <div class="thread-meta">
+          <span>Thread ID: 19cd3b26378240f5</span>
+          <span>Dates: March 9-26, 2026</span>
+          <span>Messages: 6</span>
+        </div>
+      </div>
+      <div class="thread-content">
+        <div class="participants">
+          <strong>Participants:</strong> Josh Bolden, Ellis Hunter Smith
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Ellis Hunter Smith</span>
+            <span class="message-date">March 9, 2026 at 5:49 PM</span>
+          </div>
+          <div class="message-body">Dear Mr. Bolden, I am writing to formally notify Arclabs Welding School that its current handling of my Federal Pell Grant funds is not in compliance with Title IV federal financial aid regulations...</div>
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Josh Bolden</span>
+            <span class="message-date">March 12, 2026 at 2:53 PM</span>
+          </div>
+          <div class="message-body">Good morning Ellis, Arclabs Welding School has reviewed your message regarding the handling of your Federal Pell Grant funds. Your account has been reviewed by the Financial Aid and Business Offices...</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="email-thread">
+      <div class="thread-header">
+        <div class="thread-title">Attendance History Report - Record Corrections</div>
+        <div class="thread-meta">
+          <span>Thread ID: 19df90db96e0bcbe</span>
+          <span>Dates: May 5-6, 2026</span>
+          <span>Messages: 2</span>
+        </div>
+      </div>
+      <div class="thread-content">
+        <div class="participants">
+          <strong>Participants:</strong> Trevor Owen, Annie Cavazos, Heidi Bray, Ellis Hunter Smith
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Ellis Hunter Smith</span>
+            <span class="message-date">May 5, 2026 at 5:10 PM</span>
+          </div>
+          <div class="message-body">I am writing to follow up on several discrepancies I have noticed in my time records. On my end, I see "approved" stamps with timestamps that do not make sense, such as a clock-in at 10:54...</div>
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Ellis Hunter Smith</span>
+            <span class="message-date">May 6, 2026 at 8:45 PM</span>
+          </div>
+          <div class="message-body">Annie, I am writing to request correction of three attendance discrepancies identified in my official Attendance History Report...</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="email-thread">
+      <div class="thread-header">
+        <div class="thread-title">VA Benefits - Certification and Payment Status</div>
+        <div class="thread-meta">
+          <span>Thread ID: 19c91ae203cd67ae</span>
+          <span>Dates: February 17-25, 2026</span>
+          <span>Messages: 7</span>
+        </div>
+      </div>
+      <div class="thread-content">
+        <div class="participants">
+          <strong>Participants:</strong> Josh Bolden, Ellis Hunter Smith
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Ellis Hunter Smith</span>
+            <span class="message-date">February 17, 2026 at 5:51 PM</span>
+          </div>
+          <div class="message-body">Hey man just want to check in about the va status and make sure things cleared up.</div>
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Josh Bolden</span>
+            <span class="message-date">February 17, 2026 at 5:58 PM</span>
+          </div>
+          <div class="message-body">Good afternoon Ellis, Your benefits were re-certified on 02/10/2026 and is currently Under Review by the VA.</div>
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Ellis Hunter Smith</span>
+            <span class="message-date">February 24, 2026 at 10:04 PM</span>
+          </div>
+          <div class="message-body">Just check in to see if we got that stuff cleared up or if it's pending</div>
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Josh Bolden</span>
+            <span class="message-date">February 24, 2026 at 11:43 PM</span>
+          </div>
+          <div class="message-body">Hey Ellis, it is still in a pending state. I am going to call the VA to see what is taking so long, but I suggest you do the same...</div>
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Josh Bolden</span>
+            <span class="message-date">February 25, 2026 at 3:40 PM</span>
+          </div>
+          <div class="message-body">Good morning Ellis, I called the VA and they did state everything is good to go, but your payments are ready to be released but are on pause because you have not yet verified your enrollment with them</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="email-thread">
+      <div class="thread-header">
+        <div class="thread-title">Clock In/Out Issues - Technical Support</div>
+        <div class="thread-meta">
+          <span>Thread ID: 19e1ec227beb2673</span>
+          <span>Dates: May 13, 2026</span>
+          <span>Messages: 3</span>
+        </div>
+      </div>
+      <div class="thread-content">
+        <div class="participants">
+          <strong>Participants:</strong> Trevor Owen, Annie Cavazos, Ellis Hunter Smith
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Ellis Hunter Smith</span>
+            <span class="message-date">May 13, 2026 at 12:35 AM</span>
+          </div>
+          <div class="message-body">since I'm lock out of the app you can check the clock in camera at 7:33 and that's me walking by.</div>
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Annie Cavazos</span>
+            <span class="message-date">May 13, 2026 at 9:59 PM</span>
+          </div>
+          <div class="message-body">You're not locked out of your app. Try resetting your password and let me know if that works for you.</div>
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Ellis Hunter Smith</span>
+            <span class="message-date">May 13, 2026 at 11:10 PM</span>
+          </div>
+          <div class="message-body">I reset it yesterday and it's wanting me to reset it again.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="email-thread">
+      <div class="thread-header">
+        <div class="thread-title">Attendance Ledger - Formal Request & Corrections</div>
+        <div class="thread-meta">
+          <span>Thread ID: 19dd59aa78af5682</span>
+          <span>Dates: April 28, 2026 - May 12, 2026</span>
+          <span>Messages: 8</span>
+        </div>
+      </div>
+      <div class="thread-content">
+        <div class="participants">
+          <strong>Participants:</strong> Annie Cavazos, Ellis Hunter Smith
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Ellis Hunter Smith</span>
+            <span class="message-date">April 28, 2026 at 7:42 PM</span>
+          </div>
+          <div class="message-body">Hi Annie, I am formally requesting a complete copy of my attendance ledger from program start date November 3, 2025 through today. The document should include, for every session in that range: •</div>
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Ellis Hunter Smith</span>
+            <span class="message-date">May 8, 2026 at 8:06 PM</span>
+          </div>
+          <div class="message-body">you have anything for me to sign?</div>
+        </div>
+        <div class="message">
+          <div class="message-header">
+            <span class="message-from">Annie Cavazos</span>
+            <span class="message-date">May 11, 2026 at 12:46 AM</span>
+          </div>
+          <div class="message-body">Yes, please come see me Tuesday. Or before 5:30 tomorrow.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary-section" style="margin-top: 40px;">
+      <h2>Archive Information</h2>
+      <ul class="summary-list">
+        <li><strong>Student ID:</strong> 8266</li>
+        <li><strong>School:</strong> Arclabs Welding School</li>
+        <li><strong>Location:</strong> 9510 N Houston Rosslyn Road, Houston, TX 77088</li>
+        <li><strong>Main Contacts:</strong> Josh Bolden (Financial Aid), Annie Cavazos (Student Services), Trevor Owen (Administration)</li>
+        <li><strong>Email Archive Generated:</strong> May 22, 2026</li>
+        <li><strong>Total Threads:</strong> 25</li>
+        <li><strong>Date Range:</strong> January 2026 - May 2026</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>
