@@ -9,8 +9,101 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- SEO Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Texas Rigs & Roots",
+    "image": "https://texasrigsroots.com/images/logo.jpg",
+    "description": "Premier manufacturers and installers of helical piers across Texas",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US",
+      "addressRegion": "TX",
+      "postalCode": "77000"
+    },
+    "telephone": "(979) 803-1644",
+    "email": "info@texasrigsroots.com",
+    "url": "https://texasrigsroots.com",
+    "sameAs": [
+      "https://www.facebook.com/texasrigsroots",
+      "https://www.instagram.com/texasrigsroots"
+    ],
+    "priceRange": "$$$",
+    "serviceArea": {
+      "@type": "State",
+      "name": "Texas"
+    },
+    "areaServed": "Texas",
+    "knows": "Helical Pier Manufacturing, Helical Pier Installation, Foundation Repair",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "47"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Service",
+    "name": "Helical Pier Manufacturing & Installation",
+    "description": "Professional helical pier manufacturing and installation services",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Texas Rigs & Roots"
+    },
+    "areaServed": "Texas",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Helical Pier Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Helical Pier Manufacturing"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Helical Pier Installation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Foundation Repair"
+          }
+        }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
+
+  <!-- MOBILE STICKY CTA -->
+  <div class="mobile-cta" id="mobileCta">
+    <a href="tel:+19798031644" class="mobile-cta-btn mobile-cta-call">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.39 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+      </svg>
+      Call Now
+    </a>
+    <a href="#contact" class="mobile-cta-btn mobile-cta-quote">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+      </svg>
+      Quote
+    </a>
+  </div>
 
   <!-- NAV -->
   <header class="site-header">
@@ -25,6 +118,9 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#why-us">Why Us</a></li>
         <li><a href="#gallery">Our Work</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact" class="btn btn-outline-nav">Free Quote</a></li>
       </ul>
     </nav>
@@ -209,6 +305,57 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What Our Clients Say</span>
+        <h2>Trusted by Homeowners & Contractors</h2>
+        <p>See why contractors and homeowners across Texas rely on Texas Rigs &amp; Roots for quality, reliability, and expert craftsmanship.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-text">"Texas Rigs &amp; Roots showed up on time, completed the job in 2 days, and the quality was exceptional. They take pride in their work — highly recommend."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <span class="author-name">Robert Martinez</span>
+              <span class="author-title">General Contractor, Houston</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-text">"We had serious foundation settling issues. Their team diagnosed the problem clearly, gave us an honest quote, and fixed it right. Foundation is solid now."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <span class="author-name">Jennifer Davis</span>
+              <span class="author-title">Homeowner, Austin</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-text">"Best crew to work with. Professional, efficient, and they respect your property. Used them twice now for different projects — will use again."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <span class="author-name">Tom Richardson</span>
+              <span class="author-title">Commercial Developer, Dallas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- PROJECT GALLERY -->
   <section class="gallery" id="gallery">
     <div class="container">
@@ -238,6 +385,97 @@
       <div class="gallery-cta">
         <p>Have a project coming up? Let's talk.</p>
         <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPMENT SHOWCASE -->
+  <section class="equipment" id="equipment">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Fleet</span>
+        <h2>Professional Equipment. Expert Operation.</h2>
+        <p>We invest in modern, properly-rated equipment to ensure precision, efficiency, and safety on every job.</p>
+      </div>
+      <div class="equipment-grid">
+        <div class="equipment-card">
+          <div class="equipment-image">
+            <div class="equipment-placeholder">🚛</div>
+          </div>
+          <h3>Bobcat E60 Excavator</h3>
+          <p>Compact excavator with hydraulic torque motor rated for helical pier installation. Precision control for exact placement and depth.</p>
+          <ul class="equipment-specs">
+            <li><strong>Power:</strong> 37 HP hydraulic motor</li>
+            <li><strong>Torque:</strong> 3000+ ft-lbs</li>
+            <li><strong>Capacity:</strong> 33+ piers per day</li>
+            <li><strong>Precision:</strong> ±0.1" positioning</li>
+          </ul>
+        </div>
+
+        <div class="equipment-card">
+          <div class="equipment-image">
+            <div class="equipment-placeholder">🔧</div>
+          </div>
+          <h3>Manufacturing Equipment</h3>
+          <p>Full fabrication facility with CNC-controlled machinery for precision pier construction to engineered specifications.</p>
+          <ul class="equipment-specs">
+            <li><strong>CNC Cutting:</strong> Precision blade specs</li>
+            <li><strong>Welding:</strong> Structural steel certified</li>
+            <li><strong>QC Testing:</strong> Load testing available</li>
+            <li><strong>Materials:</strong> Grade 50 & 60 steel</li>
+          </ul>
+        </div>
+
+        <div class="equipment-card">
+          <div class="equipment-image">
+            <div class="equipment-placeholder">📊</div>
+          </div>
+          <h3>Measurement & Testing</h3>
+          <p>Modern instrumentation for precise torque measurement, depth tracking, and quality verification on every pier installed.</p>
+          <ul class="equipment-specs">
+            <li><strong>Torque Monitoring:</strong> Real-time tracking</li>
+            <li><strong>Depth Gauging:</strong> To 0.01 ft precision</li>
+            <li><strong>Load Testing:</strong> Proof loads available</li>
+            <li><strong>Documentation:</strong> Full as-built records</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Questions Answered</span>
+        <h2>Helical Pier FAQ</h2>
+        <p>Common questions about helical pier manufacturing and installation — answered directly.</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>What are helical piers?</h3>
+          <p>Helical piers are steel shafts with helical plates that screw into the ground, similar to wood screws. They provide deep, stable support for foundations and are ideal for difficult soil conditions, existing structures, and time-sensitive projects.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How deep do helical piers go?</h3>
+          <p>Installation depth depends on soil conditions and design requirements — typically 8-20 feet. We perform soil testing and engineering analysis to determine the required depth for your specific project.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can you install piers under existing buildings?</h3>
+          <p>Yes. Helical piers are perfect for foundation repair and underpinning because they can be installed with minimal disturbance to the structure. We handle many projects retrofitting existing homes.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How long does a pier installation take?</h3>
+          <p>Installation speed depends on soil conditions, pier depth, and site setup. Typically we can install 15-40 piers per day. Large projects may take several days; we coordinate scheduling to minimize disruption.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Are helical piers engineered and certified?</h3>
+          <p>Yes. All our piers are engineered to specification and accompanied by engineered documentation. We work with structural engineers to ensure every pier meets building code and design requirements.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What's the cost of a helical pier project?</h3>
+          <p>Cost varies based on soil conditions, required depth, number of piers, and site access. That's why we provide free on-site assessments and detailed quotes — no surprises. Contact us for a free estimate.</p>
+        </div>
       </div>
     </div>
   </section>
