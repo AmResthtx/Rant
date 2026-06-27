@@ -32,17 +32,25 @@ before it contaminates a deliverable.
 
 ## WHAT THIS SKILL DOES
 
-A **five-phase workflow**:
+A **six-phase workflow**:
 
 1. **SOURCE** — Actively seek primary/authoritative material, not just top results
 2. **GRADE** — Score each source against the quality rubric BEFORE reading it as fact
 3. **CORROBORATE** — Require independent agreement for any load-bearing claim
-4. **GATE** — Accept / Quarantine / Reject each source by tier
-5. **ATTRIBUTE** — Cite what was used, with tier, and flag what was rejected and why
+4. **STRESS-TEST** — Pressure the surviving claims; don't accept what merely reads well
+5. **GATE** — Accept / Quarantine / Reject each source by tier
+6. **ATTRIBUTE** — Cite what was used, with tier, and flag what was rejected and why
 
 The order matters: **grade before you trust.** A source is vetted on its
 provenance and characteristics *before* its claims are absorbed — never after,
 when the content has already shaped your thinking.
+
+**Calibrated skepticism, not reflexive doubt.** The goal is to proportion scrutiny to
+stakes and evidence — heavy on safety/legal/financial/engineering claims, light on the
+trivially verifiable. Skepticism means asking who said it, what they're selling, and
+whether anyone independent agrees. It does *not* mean rejecting well-supported facts,
+demanding proof of the obvious, or stalling on endless verification. A claim
+corroborated across credible independent sources is usable — say so and move.
 
 ---
 
@@ -133,7 +141,27 @@ No single source carries a load-bearing claim into a deliverable on its own.
 
 ---
 
-## PHASE 4 — GATE (Accept / Quarantine / Reject)
+## PHASE 4 — STRESS-TEST
+
+Corroboration tells you sources agree; stress-testing tells you whether the claim
+actually holds. Don't accept information because it's well-written or intuitive.
+Pressure the claims you intend to rely on:
+
+- **Recency:** Is it current, or has it been superseded? Check dates and revisions.
+- **Edges:** Does it hold at the boundaries, or only in the happy path? What conditions
+  or exceptions does the source omit?
+- **Falsification:** What would have to be true for this to be wrong? Look for that.
+- **Independence of agreement:** Do the corroborating sources actually reason
+  separately, or do they share one upstream origin (so the "agreement" is an echo)?
+- **Incentive:** Does the source benefit from the claim being believed? Weight accordingly.
+- **Plausibility vs. proof:** Separate "sounds right" from "is shown." Persuasive prose
+  is not evidence.
+
+Scale the effort to stakes: a passing sanity check for low-cost claims, real adversarial
+pressure for anything safety-, legal-, financial-, or engineering-critical. Claims that
+survive are usable; claims that only *sound* good get downgraded or dropped.
+
+## PHASE 5 — GATE (Accept / Quarantine / Reject)
 
 Each source exits the pipeline through exactly one gate:
 
@@ -150,7 +178,7 @@ content informs the output, not after.
 
 ---
 
-## PHASE 5 — ATTRIBUTE
+## PHASE 6 — ATTRIBUTE
 
 Every deliverable that used external content reports its sourcing:
 
@@ -201,6 +229,10 @@ manufacturer's or standards body's own channel over aggregators.
 8. **Report what was rejected**, not just what was used.
 9. **Numbers, safety, legal, medical, financial → TRUSTED tier or not stated.**
 10. **No author, no date, no citations = red flag before reading.**
+11. **Skeptical, not unreasonable.** Scrutiny scales to stakes; corroborated facts are usable.
+12. **Stress-test before relying.** Sounds-good is not is-shown.
+13. **Stay current and self-correct.** Prefer current research; when better-sourced
+    information contradicts what was used before, update and say what changed.
 
 ---
 
@@ -213,6 +245,13 @@ manufacturer's or standards body's own channel over aggregators.
 - Fact-checking, or writing content that must be accurate
 - A high-tier source returns 403/paywall and a free lower-tier alternative exists
 - Multiple sources disagree on a load-bearing fact
+- Stating a number, spec, or safety/legal/medical/financial fact a decision rests on
+- Relying on a technical claim that "sounds right" but hasn't been independently checked
+- Reusing a previously gathered fact after time has passed or stakes have risen
+
+These principles also apply as a standing posture even when the skill isn't formally
+invoked — see the project `CLAUDE.md` operating principles. The skill is the detailed
+procedure; the posture is always on.
 
 ---
 
@@ -221,6 +260,10 @@ manufacturer's or standards body's own channel over aggregators.
 - `references/quality-rubric.md` — Full scorecard, signal checklists, worked examples
 - `references/sourcing-playbook.md` — Authority-biased search strategies by domain,
   handling blocked sources, tracing paraphrases to primary material
+- `references/verification-and-skepticism.md` — Calibrated-skepticism dial, the
+  stress-test questions, and continuous-improvement / self-correction practice
 
 Read `quality-rubric.md` before Phase 2. Read `sourcing-playbook.md` before Phase 1
 when the topic is unfamiliar or the first search pass returns mostly MIXED/LOW sources.
+Read `verification-and-skepticism.md` before Phase 4 for high-stakes claims or when
+sources agree suspiciously cleanly.
