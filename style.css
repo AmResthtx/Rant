@@ -1102,3 +1102,119 @@ a.contact-value:hover { color: var(--rust); }
   .stats-row       { gap: 1.25rem; }
   .contact-form    { padding: 1.75rem 1.25rem; }
 }
+
+/* ============================================
+   BLOG
+   ============================================ */
+
+.blog-listing { padding: 9rem 0 5rem; background: var(--off-white); min-height: 70vh; }
+.blog-listing .section-header h1 { font-family: var(--font-head); font-size: clamp(2rem, 5vw, 3rem); color: var(--steel); }
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+  margin-top: 3rem;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--light-grey);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.blog-card:not(.blog-card-soon):hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(44, 62, 80, 0.14);
+}
+.blog-card.featured { border-top: 4px solid var(--rust); }
+
+.blog-card-tag {
+  align-self: flex-start;
+  font-family: var(--font-head);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  color: var(--rust);
+  background: rgba(192, 57, 43, 0.08);
+  padding: 0.28rem 0.7rem;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+.blog-card h2 {
+  font-family: var(--font-head);
+  font-size: 1.32rem;
+  line-height: 1.25;
+  color: var(--steel);
+  margin-bottom: 0.7rem;
+}
+.blog-card p { color: var(--mid-grey); font-size: 0.95rem; margin-bottom: 1.1rem; flex-grow: 1; }
+.blog-card-meta { display: flex; gap: 0.5rem; color: var(--mid-grey); font-size: 0.82rem; margin-bottom: 0.9rem; }
+.blog-card-link { font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.85rem; color: var(--rust); }
+.blog-card-link.muted { color: var(--mid-grey); }
+.blog-card-soon { opacity: 0.72; }
+
+/* Article */
+.blog-article { padding: 8.5rem 0 4rem; background: var(--white); }
+.blog-narrow { max-width: 760px; }
+
+.blog-breadcrumb { font-size: 0.85rem; color: var(--mid-grey); margin-bottom: 1.6rem; }
+.blog-breadcrumb a { color: var(--rust); }
+.blog-breadcrumb span { color: var(--mid-grey); }
+
+.blog-post-header { border-bottom: 1px solid var(--light-grey); padding-bottom: 1.6rem; margin-bottom: 2.2rem; }
+.blog-post-header h1 {
+  font-family: var(--font-head);
+  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+  line-height: 1.15;
+  color: var(--steel);
+  margin: 0.6rem 0 1rem;
+}
+.blog-post-meta { display: flex; flex-wrap: wrap; gap: 0.55rem; color: var(--mid-grey); font-size: 0.9rem; }
+
+.blog-post-content { font-size: 1.06rem; line-height: 1.75; color: var(--dark); }
+.blog-post-content h2 {
+  font-family: var(--font-head);
+  font-size: 1.7rem;
+  color: var(--steel);
+  margin: 2.4rem 0 1rem;
+  padding-top: 0.4rem;
+}
+.blog-post-content p { margin-bottom: 1.2rem; }
+.blog-post-content ul { margin: 0 0 1.2rem 1.3rem; list-style: disc; }
+.blog-post-content li { margin-bottom: 0.5rem; }
+.blog-post-content strong { color: var(--steel); }
+
+.blog-equation {
+  background: var(--steel);
+  color: var(--white);
+  font-size: 1.45rem;
+  text-align: center;
+  padding: 1.3rem 1rem;
+  border-radius: var(--radius);
+  margin: 1.6rem 0;
+  letter-spacing: 0.02em;
+}
+.blog-equation strong { color: var(--white); }
+
+.blog-cta-box {
+  margin-top: 3rem;
+  background: var(--steel);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+.blog-cta-box h3 { font-family: var(--font-head); font-size: 1.7rem; margin-bottom: 0.6rem; }
+.blog-cta-box p { color: var(--light-grey); margin-bottom: 1.6rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+.blog-cta-actions { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; }
+
+@media (max-width: 600px) {
+  .blog-listing { padding: 7rem 0 3.5rem; }
+  .blog-article { padding: 7rem 0 3rem; }
+  .blog-cta-actions { flex-direction: column; }
+  .blog-cta-actions .btn { width: 100%; text-align: center; }
+}
