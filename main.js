@@ -151,3 +151,42 @@ styleSheet.textContent = `
   }
 `;
 document.head.appendChild(styleSheet);
+
+// Mobile sticky CTA - Show on mobile only, hide when near contact form
+const mobileCta = document.getElementById('mobileCta');
+const contactSection = document.getElementById('contact');
+
+function updateMobileCtaVisibility() {
+  // Only show on mobile (under 768px)
+  const isMobile = window.innerWidth < 768;
+
+  if (!isMobile) {
+    mobileCta.style.display = 'none';
+    return;
+  }
+
+  // Check if user is near contact section
+  if (contactSection) {
+    const rect = contactSection.getBoundingClientRect();
+    const isNearContact = rect.top < window.innerHeight;
+    mobileCta.style.display = isNearContact ? 'none' : 'flex';
+  } else {
+    mobileCta.style.display = 'flex';
+  }
+}
+
+// Update on scroll and resize
+window.addEventListener('scroll', updateMobileCtaVisibility, { passive: true });
+window.addEventListener('resize', updateMobileCtaVisibility, { passive: true });
+updateMobileCtaVisibility();
+
+// Track mobile CTA clicks for analytics (optional)
+if (mobileCta) {
+  mobileCta.addEventListener('click', (e) => {
+    if (window.gtag) {
+      window.gtag('event', 'mobile_cta_click', {
+        'button_type': e.target.closest('.mobile-cta-call') ? 'call' : 'quote'
+      });
+    }
+  });
+}

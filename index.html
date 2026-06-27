@@ -9,8 +9,101 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- SEO Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Texas Rigs & Roots",
+    "image": "https://texasrigsroots.com/images/logo.jpg",
+    "description": "Premier manufacturers and installers of helical piers across Texas",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US",
+      "addressRegion": "TX",
+      "postalCode": "77000"
+    },
+    "telephone": "(979) 803-1644",
+    "email": "info@texasrigsroots.com",
+    "url": "https://texasrigsroots.com",
+    "sameAs": [
+      "https://www.facebook.com/texasrigsroots",
+      "https://www.instagram.com/texasrigsroots"
+    ],
+    "priceRange": "$$$",
+    "serviceArea": {
+      "@type": "State",
+      "name": "Texas"
+    },
+    "areaServed": "Texas",
+    "knows": "Helical Pier Manufacturing, Helical Pier Installation, Foundation Repair",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "47"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Service",
+    "name": "Helical Pier Manufacturing & Installation",
+    "description": "Professional helical pier manufacturing and installation services",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Texas Rigs & Roots"
+    },
+    "areaServed": "Texas",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Helical Pier Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Helical Pier Manufacturing"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Helical Pier Installation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Foundation Repair"
+          }
+        }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
+
+  <!-- MOBILE STICKY CTA -->
+  <div class="mobile-cta" id="mobileCta">
+    <a href="tel:+19798031644" class="mobile-cta-btn mobile-cta-call">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.39 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+      </svg>
+      Call Now
+    </a>
+    <a href="#contact" class="mobile-cta-btn mobile-cta-quote">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+      </svg>
+      Quote
+    </a>
+  </div>
 
   <!-- NAV -->
   <header class="site-header">

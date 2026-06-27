@@ -75,6 +75,76 @@ ul { list-style: none; }
   font-size: 1.05rem;
 }
 
+/* ---- MOBILE STICKY CTA ---- */
+.mobile-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: linear-gradient(180deg, var(--rust) 0%, var(--rust-dark) 100%);
+  padding: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  box-shadow: 0 -2px 10px rgba(192, 57, 43, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.mobile-cta-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--white);
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.mobile-cta-call {
+  background: var(--white);
+  color: var(--rust);
+  flex: 1.2;
+}
+
+.mobile-cta-call:active {
+  background: var(--off-white);
+  transform: scale(0.98);
+}
+
+.mobile-cta-quote {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.mobile-cta-quote:active {
+  background: rgba(255,255,255,0.3);
+  transform: scale(0.98);
+}
+
+.mobile-cta svg {
+  width: 18px;
+  height: 18px;
+}
+
 /* ---- BUTTONS ---- */
 .btn {
   display: inline-flex;
@@ -957,7 +1027,18 @@ a.contact-value:hover { color: var(--rust); }
   line-height: 1.6;
 }
 
+@media (min-width: 769px) {
+  .mobile-cta { display: none !important; }
+}
+
 @media (max-width: 768px) {
+  /* Show mobile CTA and adjust spacing */
+  .mobile-cta { display: flex; }
+
+  /* Add padding to body to account for sticky CTA */
+  body > section:not(.mobile-cta):last-child {
+    padding-bottom: 70px;
+  }
   .nav-toggle { display: flex; }
 
   .nav-links {
